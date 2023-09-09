@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Self-Service Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="file:///Users/nanakboaten/Downloads/kwame-nkrumah-university-of-science-technology-logo-7C23198381-seeklogo.com.png"
+                    alt="KNUST Logo" class="knustlogo">
+            </div>
+            <div class="header-text">KNUST APPS PORTAL | STUDENTS</div>
+        </div>
+        <div class="login">Log in</div>
+    </header>
+    <div class="content">
+        <img src="file:///Users/nanakboaten/Desktop/Screenshot%202023-08-16%20at%2016.44.53.png" alt="Header Image"
+            class="imageaim">
+        <div class="login-section">
+
+
+            <div class="login-form">
+                <h2>Login</h2>
+                <form>
+                    <form action="dashboard.html" method="post"></form>
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="student-id" name="student-id" placeholder="Student Id" required>
+                    </div>
+                    <button type="button" class="login-button" onclick="redirectToDashboard()">Sign In</button>
+
+                </form>
+                <div class="forgot-password">
+                    <a href="#">Forgot Your Password?</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <footer>
+        <p>Copyright © 2023 Kwame Nkrumah University Of Science and Technology. All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function redirectToDashboard() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var studentId = document.getElementById("student-id").value;
+
+            // Check specific details
+            if (username === "afoakwa" && password === "8414421" && studentId === "20816744") {
+                window.location.href = "dashboard.html"; // Redirect to dashboard page
+            } else {
+                alert("The user name, password or studentid provided is incorrect.");
+            }
+        }
+        // Add this in your JavaScript file or within a <script> tag at the bottom of the <body> section
+        document.getElementById('scrollButton').addEventListener('click', function () {
+            // Replace 'targetSection' with the ID or class of the section you want to scroll to
+            const targetSection = document.getElementById('targetSection');
+
+            // Use smooth scrolling
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+
+
+    </script>
+    <section id="targetSection">
+        <!-- Content of the target section -->
+    </section>
+
+
+
+</body>
+
+</html>
